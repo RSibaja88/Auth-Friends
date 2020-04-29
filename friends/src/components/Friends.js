@@ -1,17 +1,30 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
-import {Link} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import axiosWithAuth from '../api/axiosAuth';
+import AddFriend from '../components/addFriend';
+// import {Link} from 'react-router-dom';
 
-const Friends = () => {
+const Friends = (props) => {
+    const [friends, setFriends] = useState([]);
+
     useEffect(() => {
-        axios.get('http://localhost:5000/api/friends')
-        .then(res => console.log(res.data))
+        axiosWithAuth().get('http://localhost:5000/api/friends')
+        .then(res => setFriends(res.data))
         .catch(error => console.error(error))
     }, [])
         return (
             <div className="Friends">
                 <h1>Friends Characters</h1>
-                <Link to='/login'>Home</Link>
+                <AddFriend/>
+                {friends.map(friend => {
+                 return (   
+            <div> 
+                <img src={friend.pic}/>
+                <h2>{friend.name}</h2>
+                <h3>{friend.age}</h3>
+                <h3>{friend.email}</h3>
+            </div>
+                )})}
+                
             </div>
         );
 }

@@ -9,7 +9,7 @@ const LogIn = (props) => {
         setCreds({...creds, [e.target.name]:e.target.value});
     };
 
-    const submitForm = (e) => {
+    const submitLogIn = (e) => {
         e.preventDefault()
         axios.post('http://localhost:5000/api/login', creds)
             .then(res => {
@@ -26,7 +26,7 @@ const LogIn = (props) => {
     <div className="LogIn">
         <h1>Log In to See Your Friends</h1>
         {prompt ? <p>{prompt}</p>: null}
-    <form onSubmit={submitForm}>
+    <form onSubmit={submitLogIn}> 
         <input type='text' 
             name='username' 
             placeholder='Enter your name...' 

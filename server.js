@@ -11,36 +11,42 @@ let nextId = 7;
 let friends = [
   {
     id: 1,
+    pic: 'https://i.imgur.com/Nap0hPU.jpg',
     name: 'Rachel Green',
     age: 30,
     email: 'rachel@friends.com'
   },
   {
     id: 2,
+    pic: 'https://i.imgur.com/As79Ssj.jpg',
     name: 'Joey Tribbiani',
     age: 34,
     email: 'joey@friends.com'
   },
   {
     id: 3,
+    pic: 'https://i.imgur.com/Y8qPwUd.jpg',
     name: 'Chandler Bing',
     age: 32,
     email: 'chandler@friends.com'
   },
   {
     id: 4,
+    pic: 'https://i.imgur.com/AuPCMSG.jpg',
     name: 'Ross Geller',
     age: 32,
     email: 'ross@friends.com'
   },
   {
     id: 5,
+    pic: 'https://i.imgur.com/s0WVN2Y.jpg',
     name: 'Monica Bing',
     age: 31,
     email: 'monica@friends.com'
   },
   {
     id: 6,
+    pic: 'https://i.imgur.com/fuHXcAs.jpg',
     name: 'Phoebe Buffay-Hannigan',
     age: 30,
     email: 'phoebe@friends.com'
