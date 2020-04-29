@@ -1,0 +1,23 @@
+h2 {
+    font-family: 'Mansalva', cursive;
+}
+
+h3 {
+    font-family: 'Mansalva', cursive;
+}
+
+.friends {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5% 5%;
+    
+}
+
+.friendCards {
+    max-width: 27%;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    padding-bottom: 5%;
+}
